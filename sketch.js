@@ -21,7 +21,7 @@ function draw() {
   mostraAtor();
   mostraCarro();
   movimentaCarro();
-
+  movimentaAtor();
 }
 
 function mostraAtor() {
@@ -32,12 +32,18 @@ function mostraCarro() {
   image(imagemCarro, xCarro, 70, 70, 50)
 }
 
-function movimentaCarro() {
-  xCarro -=2;
+function movimentaCarro(){
+  xCarro = xCarro - 2;
 }
 
-function movimentaCarro(){
-  if (keyIsDown(UP_DOWN)){
-    yAtor -=3;
+function movimentaAtor(){
+  if (keyIsDown(UP_ARROW)){
+    yAtor = yAtor - 3;
+  }
+  if (keyIsDown(DOWN_ARROW)){
+    yAtor = yAtor + 3;
   }
 }
+
+
+
